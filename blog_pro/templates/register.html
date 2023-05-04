@@ -1,0 +1,221 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,200&family=Montserrat&display=swap"
+        rel="stylesheet">
+    <style>
+
+        body {
+            font-family: poppins, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 660px;
+            background: #f0f0f0;
+            background-image: url("{% static 'img\bc2.jpg' %}");
+			background-repeat: no-repeat;
+			background-size: cover;
+        }
+          .topnav{
+             font-family: "Open Sans", sans-serif;
+             text-align:right;
+             padding: 10px;
+             margin-top: 100px;
+             background:white;
+             font-weight:700;
+
+                }
+
+        .topnav a {
+
+           color: black;
+           padding: 16px 16px;
+          text-decoration: none;
+          font-size: 16px;
+          left:1000px;
+          text-transform: capitalize;
+           }
+
+        .box1 {
+            width: 45%;
+            height: 550px;
+            float: left;
+            margin-top: 60px;
+            margin-left: 650px;
+        }
+
+        .box2 {
+            width: 562px;
+            height: 550px;
+            float: left;
+            margin-top: 40px;
+
+
+        }
+
+        .img {
+            width: 562px;
+            height: 550px;
+        }
+
+        .h1 {
+
+            color: #000000;
+        }
+
+        .td {
+            width: 280px;
+            height: 35px;
+            border-radius: 10px;
+            border: none;
+            background: #c4dfe773;
+            padding-left: 12px;
+            margin-left: 34px;
+            #e5f2f5;
+        }
+
+        .table {
+            margin-top: 27px;
+        }
+
+        td {
+            padding-bottom: 6px;
+
+        }
+
+        ::placeholder {
+            color: black;
+            font-size: 16px;
+        }
+
+        .btn {
+            width: 123px;
+            height: 37px;
+            align-items: center;
+            margin-left: 96px;
+            margin-top: 13px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background: #3fa56678;
+            color: #fff;
+        }
+
+        .act {
+            margin-left: 33px;
+        }
+    </style>
+</head>
+
+<body>
+<form action="register" method="post">
+ {% csrf_token %}
+    <!-- Top Social Area -->
+                    <div class="col-12 col-sm-4">
+                        <div class="top-social-area">
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Behance"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+
+    <div class="container">
+        <div class="topnav">
+         <a class="active" href="{% url 'home' %}">Home</a>
+           <a href="{% url 'about' %}">About us</a>
+          <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'register' %}">Register</a>
+            <a href="{% url 'contact' %}">Contact us</a>
+          </div>
+             <div class="logo-container" style="position: absolute; left: 50%; top: -0px; transform: translateX(-50%);">
+                            <a href="{% url 'home' %}" class="original-logo">
+                            <img src="{% static 'D:\Dj_blog\blog_pro\static\img\bg-img\logo.jpg' %}" alt="Logo" style="position: relative; top: 8.5px;margin: 0 auto;width:80%;height:80%;">
+                                 </a>
+                     </div>
+
+        <div class="box1">
+            <h1 align="center" class="h1">SIGN UP</h1>
+            <table class="table" align="center">
+                <tr>
+
+                    <td class="tt">
+                        <input type="text" class="td" name="first_name" placeholder=" Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <input type="text" class="td" name="last_name" placeholder=" Enter Last Name">
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <input type="email" class="td" name="email" placeholder=" Enter Email">
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <input type="text" class="td" name="username" placeholder="Enter Username">
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <input type="password" class="td" name="password1" placeholder="Enter Password">
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <input type="password" class="td" name="password2" placeholder="Confirm Password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="btn" type="submit" value="Sign Up">
+                    </td>
+                </tr>
+
+                <td>
+                    <div class="act" id="register">
+                        You have an account ?
+                        <a href="#">
+                            Login
+                        </a>
+                    </div>
+                </td>
+
+
+            </table>
+
+        </div>
+<!--        <div class="box2">-->
+<!--            <img class="img" src="{% static 'img/image1.jpg' %}">-->
+
+<!--        </div>-->
+    </div>
+
+</form>
+</body>
+
+</html>
